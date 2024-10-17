@@ -1,2 +1,2 @@
 # Restaurang_webbsidan
-Webbsidan för restaurangen Trattoria del Cuore
+Produktmål: Skapa en hemsida för en italiensk restaurang Trattoria del Cuore med en smakfullt design med bas-funktionalitet.
