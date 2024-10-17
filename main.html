@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Italiensk Restaurang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <div class="icon"><img src="images/icon.png" alt="icon"></icon> 
+        <div class="container">
+            <h1>Trattoria del Cuore</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Startsida</a></li>
+                    <li><a href="#menu">Meny</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                    <li><a href="#booking">Boka bord</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Välkommen till vår italienska restaurang!</h2>
+            <p>Njut av en autentisk upplevelse med smakrik mat och en mysig atmosfär.</p>
+            <a href="#booking" class="btn">Boka Bord</a> 
+        </div>
+    </section>
+
+    <!-- Meny Section -->
+    <section id="menu">
+        <div class="container">
+            <h2>Vår Meny</h2>
+
+            <div class="menu-item">
+                <h3>Pasta Ragu</h3>
+                <p>Ragú bolognese är en sorts urmoder när det kommer till köttfärssåser. Den är till och med så viktig
+                    att ”Accademia Italiana della Cucina” har fastslagit att maträtten ska garantera något som kan tolkas
+                    som ett ursprungsrecept. En klassisk ragú bolognese serveras med tagliatelle och aldrig med
+                    spaghetti.</p>
+                <img src="images/Klassisk-ragu.jpg" alt="Pasta Ragu">
+            </div>
+
+            <div class="menu-item">
+                <h3>Dorata</h3>
+                <p>Dorata eller seabream är en fantastisk, lagom fet fisk. Stekt dorata med salsa verde är ett riktigt gott middagstips.</p>
+                <img src="images/Dorata.jpg" alt="Dorata">
+            </div>
+
+            <div class="menu-item">
+                <h3>Pasticciata</h3>
+                <p>En mustig nötköttsgryta från Marche-regionen, långkokt i tomat och vin för att skapa en fyllig och smakrik rätt.</p>
+                <img src="images/Pasticciata.jpg" alt="Pasticciata">
+            </div>
+
+            <div class="menu-item">
+                <h3>Piadina</h3>
+                <p>Piadina är ett klassiskt italienskt tunnbröd, bakat med olivolja för en härligt mjuk och smakrik textur.
+                    Fylld med mild prosciutto cotto, krämig buffelmozzarella och riven parmesan, cocktailtomater och
+                    en nypa oregano för att få in en frisk och aromatisk twist. Piadina är en enkel men lyxig måltid som
+                    för tankarna direkt till Italien!.</p>
+                <img src="images/Piadina-med-tomat-mozzarella-prosciutto.jpg" alt="Piadina-med-tomat-mozzarella-prosciutto">t
+            </div>
+
+            <div class="menu-item">
+                <h3>Saltimbocca på kyckling</h3>
+                <p>Klassisk italiensk maträtt med ursprung från staden Brescia i norra Italien. Alla familjer har sin variant
+                    på populära maträtten. Denna variant gjord på kyckling smaksatt med färsk salvia och vitt vin.</p>
+                <img src="images/Saltimbocca-kyckling.jpg" alt="Saltimbocca">
+            </div>
+
+            <div class="menu-item">
+                <h3>Vitello Tonnato</h3>
+                <p>Tunt skivat kalvkött serverat kallt med en krämig tonfisksås, kapris och citron för en perfekt balans av smaker.</p>
+                <img src="images/Vitello-Tonnato.jpg" alt="Vitello-Tonnato">  
+            </div>
+
+            <div class="menu-item">
+                <h3>Margherita</h3>
+                <p>En klassisk pizza med krispig botten, färska tomater, buffelmozzarella och basilika, bakad till gyllenbrun perfektion.</p>
+                <img src="images/margherita.jpg" alt="margherita">  
+            </div>
+        </div>
+    </section>
+
+    <!-- Bokning Section -->
+    <section id="booking">
+        <div class="container">
+            <h2>Boka Bord</h2>
+            <p>Vill du boka ett bord? Klicka på knappen nedan för att göra din bokning.</p>
+            <a href="https://dittbokningssystem.com" class="btn" target="_blank">Boka nu</a> <!-- External booking link -->
+        </div>
+    </section>
+    
+    <!-- Kontaktformulär Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Kontakta Oss</h2>
+            <form action="#" method="POST">
+                <label for="name">Namn:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-post:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Meddelande:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Skicka Meddelande</button>
+            </form>
+            <p class="confirmation" style="display:none;">Tack! Ditt meddelande har skickats.</p>
+        </div>
+    </section>§
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Öppettider: Mån-Sön: 11:00 - 22:00</p>
+            <p>Adress: Västerlånggatan 36, 111 29 Stockholm </p>
+            <a href="https://maps.google.com/?q=Via+Italia+123" target="_blank">Få vägbeskrivning</a>
+        </div>
+    </footer>
+
+    <!-- Simple JavaScript for confirmation message -->
+    <script>
+        const form = document.querySelector('form');
+        const confirmation = document.querySelector('.confirmation');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            confirmation.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
